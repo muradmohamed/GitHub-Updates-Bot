@@ -3,7 +3,7 @@ import Actions from './actions';
 
 export default class Commands {
   static add(channel, repo, _private) {
-
+            
     if (_private === '--private') {
       return Actions.add(repo, channel.id)
       .then(result => channel.send(result))
